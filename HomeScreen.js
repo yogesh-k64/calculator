@@ -37,8 +37,10 @@ const HomeScreen = () => {
       <View style={styles.lowerContainer}>
         <View style={styles.numberContainer}>
           {numbers.map(num => (
-            <TouchableWithoutFeedback onPress={() => inputChangeHandler(num)}>
-              <View key={num} style={styles.numButton}>
+            <TouchableWithoutFeedback
+              key={num}
+              onPress={() => inputChangeHandler(num)}>
+              <View style={styles.numButton}>
                 <Text style={{fontSize: 20, color: '#494242'}}>{num}</Text>
               </View>
             </TouchableWithoutFeedback>
@@ -51,8 +53,10 @@ const HomeScreen = () => {
         </View>
         <View style={styles.operatorContainer}>
           {operators.map(opr => (
-            <TouchableWithoutFeedback onPress={() => inputChangeHandler(opr)}>
-              <View key={opr} style={styles.numButton}>
+            <TouchableWithoutFeedback
+              key={num}
+              onPress={() => inputChangeHandler(opr)}>
+              <View style={styles.numButton}>
                 <Text style={{fontSize: 20, color: '#494242'}}>{opr}</Text>
               </View>
             </TouchableWithoutFeedback>
